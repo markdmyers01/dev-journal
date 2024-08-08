@@ -4,7 +4,6 @@ services:
   environment_slug: python
   instance_size_slug: basic-xxs
   instance_count: 1
-  run_command: python manage.py migrate && gunicorn journal.wsgi:application
   routes:
     - path: /
   envs:
@@ -30,3 +29,4 @@ services:
     repo: markdmyers01/dev-journal
     branch: main
     deploy_on_push: true
+
